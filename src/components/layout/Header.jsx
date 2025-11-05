@@ -10,7 +10,6 @@ const Header = ({ onLoadingChange }) => {
   };
 
   const menuItems = [
-    { path: "/inicio", label: "Inicio" },
     { path: "/materias", label: "Materias" },
     { path: "/juegos", label: "Juegos" },
     { path: "/nosotros", label: "Nosotros" },
@@ -23,7 +22,7 @@ const Header = ({ onLoadingChange }) => {
 
         {/* Logo + Título */}
         <Link
-          to="/inicio"
+          to="/"
           onClick={handleNavigation}
           className="flex items-center gap-3"
         >
