@@ -1,7 +1,24 @@
-import Header from './components/layout/Header'
+import { useState, useEffect } from 'react';
+import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import LoadingSpinner from './components/ui/LoadingSpinner';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simular carga de datos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 segundos de carga
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -11,7 +28,7 @@ export default function App() {
           Contenido debajo del Header
         </h2>
         <p className="mt-4 text-gray-600 text-center max-w-md">
-          contenido principal de tu aplicación o las secciones de tu página.
+          contenido principal de la aplicacion.
         </p>
       </main>
       <Footer />

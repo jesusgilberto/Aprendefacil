@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-/* 🎨 Colores personalizados */
+/*  Colores personalizados */
 @theme {
   --color-rosa-principal: #ff1493;
   --color-rosa-claro: #ff80ab;
   --color-rosa-oscuro: #c71585;
 }
 
-/* ✨ Estilos personalizados */
+/* Estilos personalizados */
 .bounce-animation {
   animation: bounce 1s ease-in-out infinite;
 }
@@ -18,7 +18,7 @@
   100% { transform: translateY(0); }
 }
 
-/* 🌈 Nueva animación para el gradiente del header */
+/* animación para el gradiente del header */
 @keyframes gradient-x {
   0%, 100% {
     background-position: 0% 50%;
