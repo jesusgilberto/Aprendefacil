@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import aprendeImage from "/src/assets/img/aprende.png";
 
 const Header = ({ onLoadingChange }) => {
   const location = useLocation();
@@ -27,7 +28,7 @@ const Header = ({ onLoadingChange }) => {
           className="flex items-center gap-3"
         >
           <img
-            src="/src/assets/img/aprende.png"
+            src={aprendeImage}
             alt="Logo Aprende Fácil"
             className="w-10 h-10 md:w-12 md:h-12 rounded-md"
           />
