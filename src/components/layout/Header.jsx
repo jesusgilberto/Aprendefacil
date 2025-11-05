@@ -11,6 +11,7 @@ const Header = ({ onLoadingChange }) => {
   };
 
   const menuItems = [
+    { path: '/', label: 'Inicio' },
     { path: "/materias", label: "Materias" },
     { path: "/juegos", label: "Juegos" },
     { path: "/nosotros", label: "Nosotros" },
