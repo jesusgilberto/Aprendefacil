@@ -1,71 +1,66 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
-  const [loading, setLoading] = useState(false)
+const Header = ({ onLoadingChange }) => {
+  const location = useLocation();
 
   const handleNavigation = () => {
-    setLoading(true)
-    setTimeout(() => setLoading(false), 1200)
-  }
+    onLoadingChange(true);
+    setTimeout(() => onLoadingChange(false), 800);
+  };
+
+  const menuItems = [
+    { path: "/inicio", label: "Inicio" },
+    { path: "/materias", label: "Materias" },
+    { path: "/juegos", label: "Juegos" },
+    { path: "/nosotros", label: "Nosotros" },
+    { path: "/contactos", label: "Contacto" },
+  ];
 
   return (
-    <>
-      {loading && (
-        <div className="fixed inset-0 bg-white bg-opacity-80 flex items-center justify-center z-50">
-          <img 
-            src="/video/dinosaurio-34.gif" 
-            alt="Cargando..." 
-            className="w-32 h-32"
-          />
-        </div>
-      )}
-      
-      <header className="relative">
-        <div className="flex items-center justify-start gap-5 mt-5 p-3 border-4 border-rosa-principal rounded-2xl mx-4 relative overflow-hidden">
-          {/* Video de fondo */}
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          >
-            <source src="/video/vecteezy_soap-bubbles-floating-in-the-air-with-natural-green-blurred_14927511.mov" type="video/mp4" />
-          </video>
-          
-          {/* Logo */}
-          <img 
-            src="/img/aprende.png" 
-            alt="Logo Aprende" 
-            className="w-32 h-32 rounded-xl z-10"
-          />
-          
-          {/* Navegación */}
-          <nav className="bg-white rounded-2xl px-6 py-3 border-4 border-rosa-principal shadow-lg z-10">
-            <ul className="flex flex-wrap justify-center gap-4">
-              {[
-                { path: "/inicio", label: "Inicio" },
-                { path: "/materias", label: "Materias" },
-                { path: "/juegos", label: "Juegos" },
-                { path: "/nosotros", label: "Nosotros" },
-                { path: "/contactos", label: "Contacto" }
-              ].map((item) => (
-                <li key={item.path}>
-                  <Link 
-                    to={item.path}
-                    onClick={handleNavigation}
-                    className="text-white font-bold text-lg px-6 py-3 rounded-full bg-rosa-claro hover:bg-rosa-principal transition-all duration-300 hover:scale-110 block"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </>
-  )
-}
+    <header className="w-full bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 z-50 animate-gradient-x">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
 
-export default Header
+        {/* Logo + Título */}
+        <Link
+          to="/inicio"
+          onClick={handleNavigation}
+          className="flex items-center gap-3"
+        >
+          <img
+            src="/src/assets/img/aprende.png"
+            alt="Logo Aprende Fácil"
+            className="w-10 h-10 md:w-12 md:h-12 rounded-md"
+          />
+          <h1 className="font-semibold text-lg md:text-xl text-gray-800">
+            Aprende{" "}
+            <span className="text-rosa-principal font-bold">Fácil</span>
+          </h1>
+        </Link>
+
+        {/* Navegación */}
+        <nav>
+          <ul className="flex gap-3 md:gap-6">
+            {menuItems.map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  onClick={handleNavigation}
+                  className={`px-3 py-2 text-sm md:text-base rounded-lg transition-colors duration-200 ${
+                    location.pathname === item.path
+                      ? "bg-rosa-principal text-white font-semibold"
+                      : "text-gray-700 hover:text-rosa-principal"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

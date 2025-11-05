@@ -2,11 +2,17 @@ import Header from './components/layout/Header'
 
 export default function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-white">
       <Header />
-      <div className="text-3xl text-rosa-principal text-center mt-10">
-        Contenido debajo del Header
-      </div>
+      
+      <main className="pt-24 flex flex-col items-center">
+        <h2 className="text-3xl font-semibold text-rosa-principal text-center">
+          Contenido debajo del Header
+        </h2>
+        <p className="mt-4 text-gray-600 text-center max-w-md">
+          contenido principal de tu aplicación o las secciones de tu página.
+        </p>
+      </main>
     </div>
   );
 }
