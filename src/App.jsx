@@ -1,4 +1,5 @@
 import Header from './components/layout/Header'
+import Footer from './components/layout/Footer';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           contenido principal de tu aplicación o las secciones de tu página.
         </p>
       </main>
+      <Footer />
     </div>
   );
 }
