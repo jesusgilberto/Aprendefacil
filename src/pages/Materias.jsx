@@ -1,5 +1,5 @@
 import React from 'react'
-import { MATERIAS } from '../utils/constants'
+import { MATERIAS } from '../utils/materias-utils'
 const Materias = () => {
   return (
     <div className="text-center px-6 py-10">
