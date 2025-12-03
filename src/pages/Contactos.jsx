@@ -16,11 +16,9 @@ const Contactos = () => {
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Contacto
         </h1>
-
-        {/* CONTENEDOR COMPACTO */}
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           
-          {/* TARJETA IZQUIERDA - COMPACTA */}
+          {/* TARJETA IZQUIERDA*/}
           <div className="lg:w-[400px] w-full">
             <div className="bg-white rounded-xl shadow border-2 border-rosa-principal p-6">
               <div className="space-y-4">
@@ -64,7 +62,7 @@ const Contactos = () => {
             </div>
           </div>
 
-          {/* TARJETA DERECHA - COMPACTA */}
+          {/* TARJETA DERECHA */}
           <div className="lg:w-[400px] w-full">
             <div className="bg-white rounded-xl shadow border-2 border-rosa-principal p-6">
               <ContactForm />
