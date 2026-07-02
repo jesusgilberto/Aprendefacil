@@ -11,16 +11,16 @@ const Contactos = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white py-8">
+    <div className="min-h-screen py-8 px-4">
       <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
+        <h1 className="text-2xl font-bold text-center mb-6 text-azul-principal">
           Contacto
         </h1>
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           
           {/* TARJETA IZQUIERDA*/}
           <div className="lg:w-[400px] w-full">
-            <div className="bg-white rounded-xl shadow border-2 border-rosa-principal p-6">
+            <div className="bg-white/95 rounded-2xl shadow-lg border-4 border-azul-claro p-6">
               <div className="space-y-4">
                 <div>
                   <h3 className="text-base font-bold text-gray-800 mb-1">Teléfono</h3>
@@ -45,14 +45,14 @@ const Contactos = () => {
                   <div className="flex flex-col gap-3">
                     <button
                       onClick={handleQuickEmail}
-                      className="bg-rosa-principal hover:bg-rosa-oscuro text-white font-medium py-2 px-4 rounded-lg transition text-sm"
+                      className="bg-amarillo-soleado hover:bg-amarillo-oscuro text-gray-800 font-medium py-2 px-4 rounded-lg transition text-sm shadow"
                     >
                       Email Rápido
                     </button>
 
                     <button
                       onClick={handleCall}
-                      className="border border-rosa-principal text-rosa-principal hover:bg-rosa-claro font-medium py-2 px-4 rounded-lg transition text-sm"
+                      className="border-2 border-azul-principal text-azul-principal hover:bg-azul-claro font-medium py-2 px-4 rounded-lg transition text-sm"
                     >
                       Llamar
                     </button>
@@ -64,7 +64,7 @@ const Contactos = () => {
 
           {/* TARJETA DERECHA */}
           <div className="lg:w-[400px] w-full">
-            <div className="bg-white rounded-xl shadow border-2 border-rosa-principal p-6">
+            <div className="bg-white/95 rounded-2xl shadow-lg border-4 border-rosa-claro p-6">
               <ContactForm />
             </div>
           </div>

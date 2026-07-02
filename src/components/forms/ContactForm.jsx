@@ -34,21 +34,21 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       className="space-y-4"
     >
-      <h2 className="text-lg font-bold text-gray-800 text-center mb-3">
+      <h2 className="text-lg font-bold text-azul-principal text-center mb-3">
         Enviar mensaje
       </h2>
 
       {/* NOMBRE */}
       <div>
         <label className="block text-gray-700 font-medium mb-1 text-sm">Nombre</label>
-        <div className="flex items-center border border-rosa-principal p-2 rounded-lg bg-white">
-          <UserIcon className="h-5 w-5 text-rosa-principal mr-2" />
+        <div className="flex items-center border-2 border-azul-principal/60 p-2 rounded-lg bg-azul-claro/20">
+          <UserIcon className="h-5 w-5 text-azul-principal mr-2" />
           <input
             type="text"
             name="user_name"
             value={formData.user_name}
             onChange={handleChange}
-            className="w-full outline-none text-gray-800 text-sm"
+            className="w-full outline-none text-gray-800 text-sm bg-transparent"
             placeholder="Ingresa tu nombre"
             required
           />
@@ -58,14 +58,14 @@ const ContactForm = () => {
       {/* EMAIL */}
       <div>
         <label className="block text-gray-700 font-medium mb-1 text-sm">Correo</label>
-        <div className="flex items-center border border-rosa-principal p-2 rounded-lg bg-white">
-          <EnvelopeIcon className="h-5 w-5 text-rosa-principal mr-2" />
+        <div className="flex items-center border-2 border-lila/60 p-2 rounded-lg bg-lila/10">
+          <EnvelopeIcon className="h-5 w-5 text-lila-oscuro mr-2" />
           <input
             type="email"
             name="user_email"
             value={formData.user_email}
             onChange={handleChange}
-            className="w-full outline-none text-gray-800 text-sm"
+            className="w-full outline-none text-gray-800 text-sm bg-transparent"
             placeholder="ejemplo@gmail.com"
             required
           />
@@ -75,14 +75,14 @@ const ContactForm = () => {
       {/* MENSAJE */}
       <div>
         <label className="block text-gray-700 font-medium mb-1 text-sm">Mensaje</label>
-        <div className="flex items-start border border-rosa-principal p-2 rounded-lg bg-white">
-          <PencilSquareIcon className="h-5 w-5 text-rosa-principal mr-2 mt-1" />
+        <div className="flex items-start border-2 border-lila/70 p-2 rounded-lg bg-lila/10">
+          <PencilSquareIcon className="h-5 w-5 text-lila-oscuro mr-2 mt-1" />
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
             rows="3"
-            className="w-full outline-none text-gray-800 text-sm"
+            className="w-full outline-none text-gray-800 text-sm bg-transparent"
             placeholder="Escribe tu mensaje..."
             required
           ></textarea>
@@ -92,7 +92,7 @@ const ContactForm = () => {
       {/* ALERTAS COMPACTAS - CORREGIDO */}
       <div className="min-h-6">
         {status === "loading" && (
-          <p className="text-center text-rosa-principal text-sm">Enviando...</p>
+          <p className="text-center text-azul-principal text-sm">Enviando...</p>
         )}
 
         {status === "success" && (
@@ -111,7 +111,7 @@ const ContactForm = () => {
       {/* BOTÓN ENVIAR */}
       <button
         type="submit"
-        className="w-full bg-rosa-principal text-white py-2 rounded-lg font-medium hover:bg-rosa-oscuro transition text-sm"
+        className="w-full bg-azul-principal text-white py-2 rounded-lg font-medium hover:bg-azul-oscuro transition text-sm"
       >
         Enviar
       </button>

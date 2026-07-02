@@ -7,9 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'rosa-principal': '#ff1493',
-        'rosa-claro': '#ff80ab',
-        'rosa-oscuro': '#c71585',
+        // Paleta infantil: rosa y azul pasteles, más acentos
+        'rosa-principal': '#FF77B8',
+        'rosa-claro': '#FFD6E8',
+        'rosa-oscuro': '#FF2D95',
+        'azul-principal': '#6EC6FF',
+        'azul-claro': '#CFEFFF',
+        'amarillo-soleado': '#FFD166',
+        'verde-mint': '#8CE99A',
+        'lila': '#CBA6FF',
       },
       fontFamily: {
         'comic': ['Comic Sans MS', 'cursive', 'sans-serif'],

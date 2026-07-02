@@ -4,7 +4,7 @@ import { JUEGOS_FUTUROS } from "../utils/juegos-utils";
 const Juegos = () => {
   return (
     <div className="text-center">
-      <h1 className="text-4xl font-comic text-rosa-principal">Página de Juegos</h1>
+      <h1 className="text-4xl font-comic text-lila-oscuro">Página de Juegos</h1>
       <p className="mt-4 text-gray-600">Contenido de la página de juegos</p>
 
       {/* Listado de juegos */}

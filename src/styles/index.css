@@ -1,10 +1,34 @@
 @import "tailwindcss";
 
-/*  Colores personalizados */
+/* Colores personalizados para una paleta infantil mixta */
 @theme {
-  --color-rosa-principal: #ff1493;
-  --color-rosa-claro: #ff80ab;
-  --color-rosa-oscuro: #c71585;
+  --color-rosa-principal: #FF72A6;
+  --color-rosa-claro: #FFD8E8;
+  --color-rosa-oscuro: #E84C86;
+  --color-azul-principal: #66BFFF;
+  --color-azul-claro: #D8F2FF;
+  --color-azul-oscuro: #2E97E8;
+  --color-amarillo-soleado: #FFD86B;
+  --color-amarillo-oscuro: #E6B94A;
+  --color-verde-mint: #8FE6B0;
+  --color-verde-oscuro: #58C987;
+  --color-lila: #C7AEFF;
+  --color-lila-oscuro: #9C7CF2;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  color: #334155;
+  background-color: #fefefe;
+  background-image:
+    radial-gradient(circle at top left, rgba(102, 191, 255, 0.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(255, 114, 166, 0.16), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(143, 230, 176, 0.16), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
 /* Estilos personalizados */
@@ -29,6 +53,7 @@
 }
 
 .animate-gradient-x {
-  background-size: 200% 200%;
-  animation: gradient-x 6s ease infinite;
+  background-image: linear-gradient(90deg, rgba(102,191,255,0.2), rgba(255,114,166,0.16), rgba(255,216,107,0.18), rgba(143,230,176,0.16));
+  background-size: 300% 100%;
+  animation: gradient-x 8s ease infinite;
 }

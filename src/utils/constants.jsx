@@ -33,13 +33,13 @@ const ContactForm = () => {
     <form className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-xl space-y-4"
           onSubmit={handleSubmit}
     >
-      <h2 className="text-3xl font-bold text-center text-rose-600 mb-4">Contáctame</h2>
+      <h2 className="text-3xl font-bold text-center text-azul-principal mb-4">Contáctame</h2>
 
       {/* NOMBRE */}
       <div>
         <label className="block text-gray-700">Nombre</label>
-        <div className="flex items-center border p-2 rounded-lg">
-          <UserIcon className="h-5 w-5 text-gray-500 mr-2" />
+        <div className="flex items-center border-2 border-azul-principal/40 p-2 rounded-lg bg-azul-claro/20">
+          <UserIcon className="h-5 w-5 text-azul-principal mr-2" />
           <input
             type="text"
             name="user_name"
@@ -55,8 +55,8 @@ const ContactForm = () => {
       {/* EMAIL */}
       <div>
         <label className="block text-gray-700">Correo</label>
-        <div className="flex items-center border p-2 rounded-lg">
-          <EnvelopeIcon className="h-5 w-5 text-gray-500 mr-2" />
+        <div className="flex items-center border-2 border-lila/40 p-2 rounded-lg bg-lila/10">
+          <EnvelopeIcon className="h-5 w-5 text-lila-oscuro mr-2" />
           <input
             type="email"
             name="user_email"
@@ -72,8 +72,8 @@ const ContactForm = () => {
       {/* MENSAJE */}
       <div>
         <label className="block text-gray-700">Mensaje</label>
-        <div className="flex items-start border p-2 rounded-lg">
-          <PencilSquareIcon className="h-5 w-5 text-gray-500 mr-2 mt-1" />
+        <div className="flex items-start border-2 border-lila/50 p-2 rounded-lg bg-lila/10">
+          <PencilSquareIcon className="h-5 w-5 text-lila-oscuro mr-2 mt-1" />
           <textarea
             name="message"
             value={formData.message}
@@ -88,7 +88,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full bg-rose-600 text-white py-2 rounded-lg hover:bg-rose-700 transition"
+        className="w-full bg-azul-principal text-white py-2 rounded-lg hover:bg-azul-oscuro transition"
       >
         Enviar
       </button>

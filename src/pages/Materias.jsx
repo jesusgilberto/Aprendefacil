@@ -3,7 +3,7 @@ import { MATERIAS } from '../utils/materias-utils'
 const Materias = () => {
   return (
     <div className="text-center px-6 py-10">
-      <h1 className="text-4xl font-comic text-rosa-principal mb-8">
+      <h1 className="text-4xl font-comic text-azul-principal mb-8">
         Página de Materias
       </h1>
 
