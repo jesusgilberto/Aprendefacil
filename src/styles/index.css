@@ -57,3 +57,59 @@ body {
   background-size: 300% 100%;
   animation: gradient-x 8s ease infinite;
 }
+
+@keyframes book-flip {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateY(-18deg) translateX(-10px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+  }
+}
+
+.book-flip-animation {
+  transform-origin: left center;
+  backface-visibility: hidden;
+  animation: book-flip 0.45s ease-out;
+}
+
+@keyframes book-flip-next {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateY(-65deg) translateX(14px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+  }
+}
+
+@keyframes book-flip-prev {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateY(65deg) translateX(-14px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+  }
+}
+
+.book-flip-next,
+.book-flip-prev {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.book-flip-next {
+  transform-origin: right center;
+  animation: book-flip-next 0.45s ease-out;
+}
+
+.book-flip-prev {
+  transform-origin: left center;
+  animation: book-flip-prev 0.45s ease-out;
+}

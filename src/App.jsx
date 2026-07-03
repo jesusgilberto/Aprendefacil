@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import LoadingSpinner from './components/ui/LoadingSpinner';
@@ -7,7 +7,7 @@ import Inicio from './pages/Inicio';
 import Auth from './pages/Auth';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Materias from './pages/Materias';
+import Aprendealgonuevo from './pages/Aprendealgonuevo';
 import Juegos from './pages/Juegos';
 import Nosotros from './pages/Nosotros';
 import Contactos from './pages/Contactos';
@@ -66,7 +66,8 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/inicio" element={<Inicio />} />
-          <Route path="/materias" element={<Materias />} />
+          <Route path="/aprendealgonuevo" element={<Aprendealgonuevo />} />
+          <Route path="/materias" element={<Navigate to="/aprendealgonuevo" replace />} />
           <Route path="/juegos" element={<Juegos />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contactos" element={<Contactos />} />
